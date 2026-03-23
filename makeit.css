@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #ffb907;
+  --dark-grey: #333333;
+  --light-grey: #f8f9fa;
+  --white: #ffffff;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--white);
+  color: var(--dark-grey);
+  line-height: 1.6;
+  background-attachment: fixed;
+  position: relative;
+  background-color: #ffffff;
+}
+
+header {
+  background-color: var(--white);
+  padding: 1.5rem 5%;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--dark-grey);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav a:hover {
+  color: var(--primary-color);
+}
+.hero-container {
+  display: flex;
+  flex-direction: column; /* يرتبهم فوق بعض */
+  align-items: center; /* يوسطهم كلهم في النص */
+  width: 100%;
+  margin-top: 50px;
+}
+
+.welcom {
+  font-size: 70px;
+  margin-bottom: 5px; /* مسافة بسيطة تحتها */
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  justify-content: center; /* استخدمنا الخط اللي اخترناه */
+}
+
+.welcom-slogan {
+  font-size: 1.5rem;
+  color: #ffb907;
+  font-weight: bold;
+  text-align: center;
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.main-overlay {
+  position: relative;
+  z-index: 10;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.content {
+  text-align: center;
+}
+
+.logo {
+  width: 140px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 10px rgba(255, 204, 0, 0.3));
+}
+
+.brand {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 12px;
+  margin: 0;
+  color: #fff;
+  text-indent: 12px;
+}
+
+p {
+  color: #666;
+  font-size: 1.1rem;
+  margin-top: 15px;
+}
+
+p b {
+  color: #ffcc00;
+}
+h1,
+p,
+.welcom {
+  font-family: a;
+}
+.fkra {
+  margin-left: 5px;
+  display: flex;
+  width: 600px;
+}
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+.content-layer {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.container-flex {
+  display: flex;
+  flex-direction: row-reverse; /* ده السطر اللي بيعكسهم: الصورة يمين والكلام شمال */
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 60px 10%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.text-area {
+  flex: 1;
+  text-align: left; /* يخلي الكلام يبدأ من الشمال */
+}
+
+.text-area h2 {
+  font-size: 2.8rem;
+  color: var(--dark-grey);
+  margin-bottom: 15px;
+}
+
+.image-area {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* يضمن إن الصورة لازقة في اليمين */
+}
+
+.image-area img {
+  width: 100%;
+  max-width: 550px; /* تحكم في حجم الصورة من هنا */
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* تنسيق الحاوية الأساسية */
+.container-flex-2 {
+  display: flex;
+  justify-content: space-between; /* يرمي الكلام أقصى الشمال والصورة أقصى اليمين */
+  align-items: center; /* يوسطهم بالطول مع بعض */
+  gap: 60px; /* المسافة اللي بينهم */
+  padding: 80px 10%; /* هوامش جانبية وفوق وتحت */
+  max-width: 1400px;
+  margin: 0 auto; /* يوسط السكشن كله في نص الشاشة */
+}
+
+/* تنسيق منطقة الكلام (الشمال) */
+.text-area-2 {
+  flex: 1; /* ياخد مساحة مرنة */
+  text-align: left; /* بداية الكلام من الشمال */
+}
+
+.text-area-2 h2 {
+  font-size: 2.8rem;
+  line-height: 1.3;
+  color: var(--dark-grey);
+  margin-bottom: 25px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* تنسيق الزرار */
+.btn-main-2 {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-main-2:hover {
+  background-color: var(--dark-grey);
+  transform: translateY(-3px);
+}
+
+/* تنسيق منطقة الصورة (اليمين) */
+.image-area-2 {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* يجبر الصورة تروح أقصى اليمين */
+}
+
+.image-area-2 img {
+  width: 100%;
+  max-width: 500px; /* تحكم في كبر الصورة من هنا */
+  border-radius: 25px; /* حواف ناعمة تليق على اللوجو */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* ظل احترافي */
+}
+
+/* عشان الموبايل ميبوظش */
+@media (max-width: 992px) {
+  .container-flex-2 {
+    flex-direction: column; /* فوق بعض في الموبايل */
+    text-align: center;
+    gap: 30px;
+  }
+  .text-area-2 {
+    text-align: center;
+  }
+  .image-area-2 {
+    justify-content: center;
+  }
+}
+.btn-main {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-main:hover {
+  background-color: var(--dark-grey);
+  transform: translateY(-3px);
+}
